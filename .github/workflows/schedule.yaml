@@ -34,6 +34,8 @@ jobs:
                   IGOT_PUSH_KEY: ${{ github.event.client_payload.IGOT_PUSH_KEY || secrets.IGOT_PUSH_KEY }}
                   QQ_SKEY: ${{ github.event.client_payload.QQ_SKEY || secrets.QQ_SKEY }}
                   QQ_MODE: ${{ github.event.client_payload.QQ_MODE || secrets.QQ_MODE }}
+                  QYWX_KEY: ${{ github.event.client_payload.QYWX_KEY || secrets.QYWX_KEY }}
+                  QYWX_AM: ${{ github.event.client_payload.QYWX_AM || secrets.QYWX_AM }}
                   PUSH_PLUS_TOKEN: ${{ github.event.client_payload.PUSH_PLUS_TOKEN || secrets.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ github.event.client_payload.PUSH_PLUS_USER || secrets.PUSH_PLUS_USER }}
                   #通用配置
@@ -45,3 +47,6 @@ jobs:
                   REPO: ${{ secrets.REPO }}
                   GITHUBUSER: ${{ secrets.GITHUBUSER }}
                   TRIGGER_KEYWORDS: ${{ secrets.TRIGGER_KEYWORDS }}
+                  #CRONTAB
+                  CRONTAB: ${{ '0 0 0,16 * * *' }} #定时在每天0和下午4点整执行一次
+                  SYNCURL: https://github.com/lxk0301/jd_scripts/raw/master/jd_joy_reward.js #此处填写你要执行的js
